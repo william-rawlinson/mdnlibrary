@@ -45,6 +45,9 @@ class Book(models.Model):
         'Returns the URL to access a record for this book'
         return reverse('book-detail',args=[str(self.id)])
 
+    class Meta:
+        ordering = ['title']
+
 class BookInstance(models.Model):
     # Model representing a specific copy of a book
     id = models.UUIDField(primary_key = True,
