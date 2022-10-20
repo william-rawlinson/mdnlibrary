@@ -16,6 +16,13 @@
     <li><strong>Authors:</strong> {{ num_authors }}</li>
     <li><strong>Fiction genres:</strong> {{num_genres_fiction}}</li>
     <li><strong>Books with 'The' in title:</strong> {{num_books_the}}</li>
+    <p> You have visited this page {{ num_visits }} 
+      {% if num_visits > 1 or num_visits == 0 %}
+        times
+      {% else %}
+        time
+      {% endif %}
+    </p>
   </ul>
 {% endblock %}
 
